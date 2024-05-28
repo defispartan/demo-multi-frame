@@ -17,7 +17,7 @@ export function DebugLink() {
 
     const url = new URL("/", debuggerUrl);
 
-    url.searchParams.set("url", window.location.href + "frames");
+    url.searchParams.set("url", window.location.href);
 
     setHref(url.toString());
   }, []);

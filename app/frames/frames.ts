@@ -7,7 +7,7 @@ import { DEFAULT_DEBUGGER_HUB_URL } from "../debug";
 import { getLensFrameMessage, isLensFrameActionPayload } from "frames.js/lens";
 
 export const frames = createFrames({
-  basePath: "/frames",
+  basePath: "/",
   initialState: {
     pageIndex: 0,
   },
