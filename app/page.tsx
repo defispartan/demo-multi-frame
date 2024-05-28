@@ -15,7 +15,8 @@ export async function generateMetadata(): Promise<Metadata> {
 export default async function Home() {
   return (
     <div>
-      Frames.js Multi protocol example <DebugLink />
+      Frames.js Multi protocol example. The Template Frame is on this page,
+      it&apos;s in the html meta tags (inspect source). <DebugLink />
     </div>
   );
 }
