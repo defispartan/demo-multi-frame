@@ -9,7 +9,7 @@ export function currentURL(pathname: string): URL {
     return new URL(pathname, `${protocol}://${host}`);
   } catch (error) {
     console.error(error);
-    return new URL("http://localhost:3000");
+    return new URL("http://localhost:3000/frames");
   }
 }
 
@@ -17,7 +17,7 @@ export function appURL() {
   if (process.env.APP_URL) {
     return process.env.APP_URL;
   } else {
-    const url = process.env.APP_URL || vercelURL() || "http://localhost:3000";
+    const url = process.env.APP_URL || vercelURL() || "http://localhost:3000/frames";
     console.warn(
       `Warning: APP_URL environment variable is not set. Falling back to ${url}.`
     );
@@ -27,6 +27,6 @@ export function appURL() {
 
 export function vercelURL() {
   return process.env.VERCEL_URL
-    ? `https://${process.env.VERCEL_URL}`
+    ? `https://${process.env.VERCEL_URL}/frames`
     : undefined;
 }
